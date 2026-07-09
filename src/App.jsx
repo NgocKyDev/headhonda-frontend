@@ -7,7 +7,6 @@ import HomePage from './pages/HomePage';
 import ProductsPage from './pages/ProductsPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import CategoriesPage from './pages/CategoriesPage';
-// ✅ Đổi route parameter từ :id thành :categoryName
 import CategoryProductsPage from './pages/CategoryProductsPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
@@ -24,6 +23,7 @@ import AdminDashboard from './pages/AdminDashboard';
 import AdminInventory from './pages/AdminInventory';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import Chatbot from './components/Chatbot/Chatbot';
 
 export default function App() {
   return (
@@ -35,7 +35,6 @@ export default function App() {
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/products/:id" element={<ProductDetailPage />} />
           <Route path="/categories" element={<CategoriesPage />} />
-          {/* ✅ Đổi route parameter */}
           <Route path="/categories/:categoryName/products" element={<CategoryProductsPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
@@ -56,6 +55,7 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
+      <Chatbot />  {/* Chatbot component */}
     </>
   );
 }
