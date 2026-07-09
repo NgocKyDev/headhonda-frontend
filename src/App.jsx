@@ -23,7 +23,7 @@ import AdminDashboard from './pages/AdminDashboard';
 import AdminInventory from './pages/AdminInventory';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
-import Chatbot from './components/Chatbot/Chatbot';
+import Chatbot from './components/Chatbot';
 
 export default function App() {
   return (
