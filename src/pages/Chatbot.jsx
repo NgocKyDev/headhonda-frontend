@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import './Chatbot.css';
-const API_URL = 'https://ranch-expediter-excursion.ngrok-free.dev/api/v1/chat';
+const API_URL = 'https://tavern-liability-preplan.ngrok-free.dev/api/v1/chat';
 
 export default function Chatbot() {
   const [messages, setMessages] = useState([
