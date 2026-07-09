@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import './Chatbot.css';
+import '../Chatbot.css';
 const API_URL = 'https://tavern-liability-preplan.ngrok-free.dev/api/v1/chat';
 
 export default function Chatbot() {
