@@ -1,5 +1,6 @@
 {
   "rewrites": [
+    { "source": "/api/v1/chat", "destination": "https://tavern-liability-preplan.ngrok-free.dev/api/v1/chat" },
     { "source": "/api/:path*", "destination": "https://ranch-expediter-excursion.ngrok-free.dev/api/:path*" },
     { "source": "/uploads/:path*", "destination": "https://ranch-expediter-excursion.ngrok-free.dev/uploads/:path*" },
     { "source": "/(.*)", "destination": "/index.html" }
