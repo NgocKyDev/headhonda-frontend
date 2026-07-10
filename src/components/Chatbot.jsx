@@ -6,7 +6,7 @@ export default function Chatbot() {
   const [messages, setMessages] = useState([
     { 
       type: 'bot', 
-      text: 'Xin chào! Tôi là Tuất Vinh - trợ lý ảo của HEAD Honda. Tôi có thể giúp gì cho bạn?\n\n💡 Bạn có thể hỏi:\n• Thông tin sản phẩm\n• Giá xe\n• Tình trạng còn hàng\n• Khuyến mãi' 
+      text: 'Xin chào! Tôi là trợ lý ảo của HEAD Honda. Tôi có thể giúp gì cho bạn?\n\n💡 Bạn có thể hỏi:\n• Thông tin sản phẩm\n• Giá xe\n• Tình trạng còn hàng\n• Khuyến mãi' 
     }
   ]);
   const [input, setInput] = useState('');
