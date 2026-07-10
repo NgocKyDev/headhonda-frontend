@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080/api/v1/chat";
+const API_URL = "https://tavern-liability-preplan.ngrok-free.dev/api/v1/chat";
 
 
 // ===============================
@@ -81,7 +81,7 @@ function addUserMessage(text) {
 // ===============================
 // Scroll cuối
 // ===============================
-function scrollBottom() {
+function scrollBottom(){
 
     chatBody.scrollTop = chatBody.scrollHeight;
 
@@ -94,9 +94,9 @@ function scrollBottom() {
 // ===============================
 // Loading
 // ===============================
-function showTyping() {
+function showTyping(){
 
-    if (typing) {
+    if(typing){
 
         typing.style.display = "flex";
 
@@ -106,9 +106,9 @@ function showTyping() {
 
 
 
-function hideTyping() {
+function hideTyping(){
 
-    if (typing) {
+    if(typing){
 
         typing.style.display = "none";
 
@@ -123,14 +123,14 @@ function hideTyping() {
 // ===============================
 // Gửi tin nhắn
 // ===============================
-async function sendMessage() {
+async function sendMessage(){
 
 
     const message = messageInput.value.trim();
 
 
 
-    if (message === "") {
+    if(message === ""){
 
         return;
 
@@ -156,13 +156,13 @@ async function sendMessage() {
         const response = await fetch(API_URL, {
 
 
-            method: "POST",
+            method:"POST",
 
 
-            headers: {
+            headers:{
 
 
-                "Content-Type": "application/json"
+                "Content-Type":"application/json"
 
             },
 
@@ -188,7 +188,7 @@ async function sendMessage() {
 
 
         console.log(
-            JSON.stringify(result, null, 2)
+            JSON.stringify(result,null,2)
         );
 
 
@@ -212,7 +212,7 @@ async function sendMessage() {
 
 
 
-        if (typeof result === "string") {
+        if(typeof result === "string"){
 
 
             botText = result;
@@ -220,7 +220,7 @@ async function sendMessage() {
 
         }
 
-        else if (result.message) {
+        else if(result.message){
 
 
             botText = result.message;
@@ -228,7 +228,7 @@ async function sendMessage() {
 
         }
 
-        else if (result.data) {
+        else if(result.data){
 
 
             botText = result.data;
@@ -236,7 +236,7 @@ async function sendMessage() {
 
         }
 
-        else if (result.response) {
+        else if(result.response){
 
 
             botText = result.response;
@@ -244,7 +244,7 @@ async function sendMessage() {
 
         }
 
-        else if (result.answer) {
+        else if(result.answer){
 
 
             botText = result.answer;
@@ -252,7 +252,7 @@ async function sendMessage() {
 
         }
 
-        else if (result.result) {
+        else if(result.result){
 
 
             botText = result.result;
@@ -263,7 +263,7 @@ async function sendMessage() {
 
 
 
-        if (botText !== "") {
+        if(botText !== ""){
 
 
             addBotMessage(botText);
@@ -271,7 +271,7 @@ async function sendMessage() {
 
         }
 
-        else {
+        else{
 
 
             addBotMessage(
@@ -285,7 +285,7 @@ async function sendMessage() {
 
 
     }
-    catch (error) {
+    catch(error){
 
 
         console.error(
@@ -330,10 +330,10 @@ sendButton.addEventListener(
 // ===============================
 messageInput.addEventListener(
     "keydown",
-    function (e) {
+    function(e){
 
 
-        if (e.key === "Enter") {
+        if(e.key === "Enter"){
 
             sendMessage();
 
